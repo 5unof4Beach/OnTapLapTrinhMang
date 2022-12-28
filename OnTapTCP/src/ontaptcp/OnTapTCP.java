@@ -25,17 +25,18 @@ public class OnTapTCP {
     public static void main(String[] args) {
         
         try{
-            Socket s = new Socket("192.168.0.6", 11310);
+            Socket s = new Socket("192.168.68.113", 11310);
             DataOutputStream dos = new DataOutputStream(s.getOutputStream());
             ObjectOutputStream oos = new ObjectOutputStream(s.getOutputStream());
             DataInputStream dis = new DataInputStream(s.getInputStream());
             ObjectInputStream ois = new ObjectInputStream(s.getInputStream());
             dos.writeUTF("B19DCCN186");
             Student student = (Student) ois.readObject();
+           
             System.out.println(student.getMaSV());
             student.setGroup(6);
             student.setHovaten("Bui Minh Duc dep trai vl");
-            student.setIP("192.168.0.2");
+            student.setIP("192.168.68.113");
             
             oos.writeObject(student);
             oos.flush(); 

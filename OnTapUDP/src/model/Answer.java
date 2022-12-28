@@ -15,7 +15,6 @@
 /*    */   implements Serializable
 /*    */ {
 /*    */   static final long serialVersionUID = 22L;
-///*    */   static final long serialVersionUID = 23L;
 /*    */   Student student;
 /*    */   boolean alreadyRegistration = false;
 /*    */   

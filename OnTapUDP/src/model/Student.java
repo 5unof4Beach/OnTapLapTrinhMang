@@ -18,7 +18,6 @@
 /*    */   implements Serializable
 /*    */ {
 /*    */   static final long serialVersionUID = 11L;
-///*    */   static final long serialVersionUID = 12L;
 /*    */   private String maSV;
 /*    */   private String hovaten;
 /*    */   private String IP;
