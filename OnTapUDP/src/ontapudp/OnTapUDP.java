@@ -20,7 +20,7 @@ import model.Student;
 public class OnTapUDP {
 
     static int PORT = 11310;
-    static String IP = "192.168.68.113";
+    static String IP = "192.168.0.2";
     
     public static void main(String[] args) throws IOException, ClassNotFoundException {
         try {
@@ -63,5 +63,28 @@ public class OnTapUDP {
         Student receiveStudent = (Student) ois.readObject();
         
         System.out.println("+++++++++++++----------+++++++++++"+receiveStudent.getHovaten());
+    }
+    
+    public static int gcd(int a, int b){
+        if(a == 0){
+            return b;
+        }
+        return gcd(b%a, a);
+    }
+
+    public static int lcm(int a, int b){
+        return (a / gcd(a, b)) * b;
+    }
+
+    public boolean isPrime(int n){
+        if(n <= 1){
+            return false;
+        }
+        for(int i = 2; i < n; i++){
+            if(n%i == 0){
+                return false;
+            }
+        }
+        return true;
     }
 }
